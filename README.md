@@ -20,16 +20,16 @@
 
 ## Sencha Touch SDK ダウンロード
 
-![image](001.png)
+![image](img/001.png)
 
 [Sencha Touch SDK ダウンロードページ](http://www.sencha.com/products/touch/download/)にアクセスすると上記のようなページが表示されますので、上記画像の赤枠部分をクリックしてSDKファイルをダウンロードしてください。
 
 
-![image](002.png)
+![image](img/002.png)
 
 ダウンロードが完了すると上記のようなzipファイルが出来上がると思いますので、このzipを解凍しておきましょう。
 
-![image](003.png)
+![image](img/003.png)
 
 解凍すると上記のような「**touch-2.3.1**」というディレクトリが現れます。  
 後ほど扱いやすい場所へ移動しますが、一旦はこのままで大丈夫です。
@@ -37,7 +37,7 @@
 
 ## Sencha Cmd のインストール
 
-![image](004.png)
+![image](img/004.png)
 
 続いて Sencha Cmd のダウンロード・インストールを行っていきます。  
 [Sencha Cmd ダウンロードページ](http://www.sencha.com/products/sencha-cmd/download)にアクセスすると上記のようなページが表示されますので、上記画像の赤枠部分をクリックしてインストーラーをダウンロードしてください。
@@ -82,7 +82,7 @@
 
 ## Rubyのインストール（Windows系の方）
 
-![image](005.png)
+![image](img/005.png)
 
 Windowsの方は別途Rubyをインストールする必要がありますので、[RubyInstallerのダウンロードページ](http://rubyinstaller.org/downloads/)にアクセスして頂き、赤枠のリンクよりRubyのインストーラーをダウンロードしてください（OSが64bitの方は、x64の方をダウンロードしてください）
 
