@@ -28,8 +28,20 @@
     - build.xml
     - index.html
     - packager.json
-    
+
 
 ## 確認してみよう！
 
 ローカルWebサーバーを起動して確認してみよう！
+
+
+## 自分でコンポーネントを設置してみよう！
+
+    - app/
+      ├ controller/
+      ├ form/
+      ├ model/
+      ├ store/
+      ├ profile/
+      └ view/
+        └ Main.js ←このファイルを編集します
