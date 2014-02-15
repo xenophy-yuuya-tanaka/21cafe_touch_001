@@ -1,9 +1,11 @@
 Ext.define('App.view.Main', {
 
-    extend: 'Ext.Panel',
-    xtype: 'main',
+    extend: 'Ext.Container',
+    xtype: 'app-main',
 
     config: {
+
+        layout: 'fit',
 
         items: []
 

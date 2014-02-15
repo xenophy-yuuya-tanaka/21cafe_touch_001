@@ -21,6 +21,10 @@ Ext.application({
         'Main'
     ],
 
+    stores: [
+        'Notes'
+    ],
+
     icon: {
         '57': 'resources/icons/Icon.png',
         '72': 'resources/icons/Icon~ipad.png',
@@ -44,7 +48,7 @@ Ext.application({
         Ext.fly('appLoadingIndicator').destroy();
 
         // Initialize the main view
-        Ext.Viewport.add(Ext.create('App.view.Main'));
+        Ext.Viewport.add(Ext.create('App.view.List'));
     },
 
     onUpdated: function() {
