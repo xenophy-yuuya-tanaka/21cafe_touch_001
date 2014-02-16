@@ -9,9 +9,11 @@ Ext.define('App.view.Main', {
 
     config: {
 
-        layout: 'fit',
+        layout: 'card',
 
         items: [{
+            xtype: 'app-list'
+        }, {
             xtype: 'app-edit'
         }]
 

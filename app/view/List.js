@@ -11,7 +11,18 @@ Ext.define('App.view.List', {
 
         store: 'Notes',
 
-        itemTpl: '{text}  -  {update}'
+        itemTpl: '{text}  -  {update}',
+
+        items: [{
+            xtype: 'titlebar',
+            title: 'memo',
+            docked: 'top',
+            items: [{
+                text: 'New',
+                action: 'new',
+                align: 'right'
+            }]
+        }]
 
     }
 
