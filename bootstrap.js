@@ -20,6 +20,12 @@ Ext.Loader.addClassPathMappings({
   "Ext.draw.engine.SvgContext.Gradient": "touch/src/draw/engine/SvgContext.js"
 });
 Ext.ClassManager.addNameAlternateMappings({
+  "App.controller.Edit": [],
+  "App.controller.Main": [],
+  "App.model.Note": [],
+  "App.store.Notes": [],
+  "App.view.Edit": [],
+  "App.view.List": [],
   "App.view.Main": [],
   "Ext.AbstractComponent": [],
   "Ext.AbstractManager": [],
@@ -746,8 +752,18 @@ Ext.ClassManager.addNameAlternateMappings({
   ]
 });
 Ext.ClassManager.addNameAliasMappings({
+  "App.controller.Edit": [],
+  "App.controller.Main": [],
+  "App.model.Note": [],
+  "App.store.Notes": [],
+  "App.view.Edit": [
+    "widget.app-edit"
+  ],
+  "App.view.List": [
+    "widget.app-list"
+  ],
   "App.view.Main": [
-    "widget.main"
+    "widget.app-main"
   ],
   "Ext.AbstractComponent": [],
   "Ext.AbstractManager": [],

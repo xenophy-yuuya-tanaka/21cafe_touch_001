@@ -9,6 +9,10 @@ Ext.define('App.model.Note', {
     config: {
         fields: [
             {
+                name: 'id',
+                type: 'string'
+            },
+            {
                 name: 'text',
                 type: 'string'
             },
@@ -18,7 +22,7 @@ Ext.define('App.model.Note', {
             }
         ],
         proxy: {
-            type: 'memory'
+            type: 'localstorage'
         }
     }
 });

@@ -14,6 +14,7 @@ Ext.define('App.store.Notes', {
         model: 'App.model.Note',
         storeId: 'Notes'
     },
+    /*
     data: [
         {text: 'TESTTEST', update: '2013/08/01 13:00'},
         {text: 'TESTTEST', update: '2013/08/02 13:00'},
@@ -37,4 +38,5 @@ Ext.define('App.store.Notes', {
         {text: 'TESTTEST', update: '2013/08/01 13:00'},
         {text: 'TESTTEST', update: '2013/08/01 13:00'}
     ]
+    */
 });

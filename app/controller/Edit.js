@@ -31,14 +31,15 @@ Ext.define('App.controller.Edit', {
             record = edit.getRecord(),
             isNew = Ext.isEmpty(record.get('update'));
 
-        console.log(record.data);
-
         val.update = Ext.Date.format(new Date(), 'Y/m/d H:m');
         record.set(val);
 
         if (isNew) {
+            record.set('id', Ext.String.format('memo{0}', Ext.Date.now()));
             store.add(record);
         }
+
+        console.log(record.data);
 
         store.sync();
 
