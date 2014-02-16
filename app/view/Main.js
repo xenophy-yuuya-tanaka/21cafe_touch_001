@@ -2,7 +2,8 @@ Ext.define('App.view.Main', {
 
     extend: 'Ext.Container',
     requires: [
-        'App.view.List'
+        'App.view.List',
+        'App.view.Edit'
     ],
     xtype: 'app-main',
 
@@ -11,7 +12,7 @@ Ext.define('App.view.Main', {
         layout: 'fit',
 
         items: [{
-            xtype: 'app-list'
+            xtype: 'app-edit'
         }]
 
     }
