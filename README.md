@@ -1,5 +1,13 @@
 # README
 
+## 各ステップ毎のソースコード
+- [step1 - プロジェクトを作ってみよう！](https://github.com/xenophy-yuuya-tanaka/21cafe_touch_001/archive/step1.zip)
+- [step2 - 一覧画面の独自コンポーネントを作ってみよう！](https://github.com/xenophy-yuuya-tanaka/21cafe_touch_001/archive/step2.zip)
+- [step3 - コンポーネントにストアをくっつけてみよう！](https://github.com/xenophy-yuuya-tanaka/21cafe_touch_001/archive/step3.zip)
+- [step4 - 登録画面の独自コンポーネントを作ってみよう！](https://github.com/xenophy-yuuya-tanaka/21cafe_touch_001/archive/step4.zip)
+- [step5 - 今まで作った画面を組み合わせてみよう！](https://github.com/xenophy-yuuya-tanaka/21cafe_touch_001/archive/step5.zip)
+- [step6 - デプロイしてみよう！](https://github.com/xenophy-yuuya-tanaka/21cafe_touch_001/archive/step6.zip)
+
 ## 今回のハンズオンに必要なもの
 
 今回のハンズオンで利用する周辺ツールは下記になります。  
