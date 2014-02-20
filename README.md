@@ -143,3 +143,47 @@ xt.data.Model)
 
 
 - [http://docs.sencha.com/extjs/4.2.2/#!/api/Ext.data.Store](http://docs.sencha.com/extjs/4.2.2/#!/api/Ext.data.Store)
+
+
+## ストアを使うための設定と、一覧コンポーネントへの設定
+
+これでモデルとストアが一通り出来ました。  
+今度はこれを、アプリケーション内で利用できるように設定を行います。
+
+設定を行うファイルはプロジェクトディレクトリ直下の`app.js`を編集します。  
+`app.js`内では、`Ext.application`メソッドを利用してアプリケーション全体のエントリーポイントが実装されています。
+
+そのコード内の途中に次のように、先ほど作成したストアクラスを設定します。
+
+    Ext.application({
+        name: 'App',
+    
+        requires: [
+            'Ext.MessageBox'
+        ],
+        views: [
+            'Main'
+        ],
+        stores: [
+            'Notes'　←ココ
+        ],
+        ... // 省略
+
+このように、`views` `stores` `controllers`といったプロパティを定義してクラス名を設定してあげることで、アプリケーション起動時に必要なクラスとして読み込まれます。（`requires`のようなもの）
+
+`Ext.application`や`Ext.application`における`views` `stores` `controllers`などは、ここで説明すると少し長くなってしまうので、今のところは「このメソッドを利用してアプリケーションが起動して、その際のオプションとして3種のプロパティがある」という感じに思っておいてください。
+
+この設定が完了したら、`List.js`に定義をしていた`data`プロパティを削除し、新たに`store: 'Notes'`を追加しておいてください。
+
+    Ext.define('App.view.List', {
+        extend: 'Ext.dataview.List',
+        xtype: 'app-list',
+        config: {
+            layout: 'fit',
+            store: 'Notes',
+            itemTpl: '{text}  -  {update}'
+        }
+    });
+
+この状態でアプリケーションを再度起動すると、ちゃんと表示されると思います。  
+データが同じだと少し分かりにくいので、ストアに移動させる際に少しデータを変えておくと良いかもしれません。
