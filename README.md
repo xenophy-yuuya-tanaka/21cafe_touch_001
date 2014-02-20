@@ -95,3 +95,17 @@
 アプリケーションの全体の表示で使っている`Main`クラスに、先ほど作成した一覧コンポーネントを追加します。
 
 追加方法は`items`プロパティに`List`コンポーネントで設定した`xtype`の値を入れてもらえれば問題無いです。また、この際に1点注意なのですが、新規に作成したクラスの`xtype`などを利用する場合は、`requires`配列に対象のクラスを設定しておく必要があります。
+
+    Ext.define('App.view.Main', {
+        extend: 'Ext.Container',
+        requires: [
+            'App.view.List' ←必要なクラスの定義
+        ],
+        xtype: 'app-main',
+        config: {
+            layout: 'fit',
+            items: [{
+                xtype: 'app-list' ←ここで使うには、requiresプロパティに必要なクラスを定義する
+            }]
+        }
+    });
