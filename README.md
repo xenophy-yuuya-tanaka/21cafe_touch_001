@@ -83,3 +83,63 @@
 xt.data.Model)
 
 
+## 続いてストアをつくる
+
+ストアは、上記で作成したモデルデータを管理するための入れ物のような役割をします。  
+基本的には、`Ext.data.Store`クラスを継承したクラスを作成し、扱いたいデータモデルを設定するだけです。
+
+今回は、一部のプロパティの説明のみを行います。  
+上記のモデルを利用して実装したのが、次のコード
+
+    Ext.define('App.store.Notes', {
+        extend: 'Ext.data.Store',
+        requires: [
+            'App.model.Note'
+        ],
+        config: {
+            autoLoad: true,
+            model: 'App.model.Note',
+            storeId: 'Notes'
+        },
+        data: [
+            {text: 'TESTTEST', update: '2013/08/01 13:00'},
+            {text: 'TESTTEST', update: '2013/08/02 13:00'},
+            {text: 'TESTTEST', update: '2013/08/03 13:00'},
+            {text: 'TESTTEST', update: '2013/08/01 13:00'},
+            {text: 'TESTTEST', update: '2013/08/01 13:00'},
+            {text: 'TESTTEST', update: '2013/08/01 13:00'},
+            {text: 'TESTTEST', update: '2013/08/01 13:00'},
+            {text: 'TESTTEST', update: '2013/08/01 13:00'},
+            {text: 'TESTTEST', update: '2013/08/01 13:00'},
+            {text: 'TESTTEST', update: '2013/08/01 13:00'},
+            {text: 'TESTTEST', update: '2013/08/01 13:00'},
+            {text: 'TESTTEST', update: '2013/08/01 13:00'},
+            {text: 'TESTTEST', update: '2013/08/01 13:00'},
+            {text: 'TESTTEST', update: '2013/08/01 13:00'},
+            {text: 'TESTTEST', update: '2013/08/01 13:00'},
+            {text: 'TESTTEST', update: '2013/08/01 13:00'},
+            {text: 'TESTTEST', update: '2013/08/01 13:00'},
+            {text: 'TESTTEST', update: '2013/08/01 13:00'},
+            {text: 'TESTTEST', update: '2013/08/01 13:00'},
+            {text: 'TESTTEST', update: '2013/08/01 13:00'},
+            {text: 'TESTTEST', update: '2013/08/01 13:00'}
+        ]
+    });
+
+新たに出てきた3種類のプロパティ
+
+- autoLoad
+    - これは、このストアのクラスがインスタンス化された際、自動的に`proxy`に設定された情報からデータを取得するプロパティです。  
+      この設定を行っていない場合は、ストア生成後に`load`メソッドを実行しないとデータが読み込まれません。
+- model
+    - プロパティの名前通り、このストアに設定するモデルクラスを文字列で定義します
+- storeId
+    - MVCに沿って実装している場合、`Ext.getStore('Notes')`でストアのインスタンスの取得が行えますが（引数はストアのクラス名（このクラスであれば`Notes`））、何かしら単体でこのクラスを利用するとなった場合は、`storeId`を設定しておかないと同じように取得することが行えません。  
+      今回は必要無いですが、念のため付けておくともしもの時に楽です。
+      
+`data`プロパティについては、前回の一覧用コンポーネントに定義したものと同様で固定データを指定することが出来ます。ただ前回と大きく違うのは、ストアとして定義しておくことによって、最終的にサーバーからデータを取得するとなった際に`proxy`の設定を書き換えるだけで良いという点です。
+
+色々説明し切れていない部分はありますが、詳しく知りたい方はリファレンスを見てみてください
+
+
+- [http://docs.sencha.com/extjs/4.2.2/#!/api/Ext.data.Store](http://docs.sencha.com/extjs/4.2.2/#!/api/Ext.data.Store)
