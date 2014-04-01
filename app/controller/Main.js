@@ -19,7 +19,7 @@ Ext.define('App.controller.Main', {
 
     onAdd: function() {
         var me    = this,
-            model = Ext.ModelManager.create({}, 'App.model.Note'),
+            model = Ext.create('App.model.Note'),
             view  = me.getMain(),
             edit  = me.getEdit();
 
